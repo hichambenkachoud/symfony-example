@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+Registration
+{% endblock %}
+
+{% block body %}
+    {{ form_start(form, {'attr': {'name': 'registration'}}) }}
+        {{ form_errors(form) }}
+    {{ form_rest(form) }}
+
+    <button>Register</button>
+    {{ form_end(form) }}
+
+{% endblock %}
+
+
+

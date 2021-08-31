@@ -65,6 +65,10 @@
         <source>Account is locked.</source>
         <target>Le compte est bloqué.</target>
       </trans-unit>
+      <trans-unit id="account.suspended" resname="Your account s suspended.">
+        <source>Your account s suspended.</source>
+        <target>Votre compte est suspendu.</target>
+      </trans-unit>
       <trans-unit id="gd.MOnZ" resname="Too many failed login attempts, please try again later.">
         <source>Too many failed login attempts, please try again later.</source>
         <target>Plusieurs tentatives de connexion ont échoué, veuillez réessayer plus tard.</target>
