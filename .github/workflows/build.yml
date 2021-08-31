@@ -12,9 +12,7 @@ jobs:
         node-version: ['14.7']
     services:
       mysql:
-        image: mysql:8.0
-        env:
-          MYSQL_ROOT_PASSWORD: 'password'
+        image: mysql:5.7
         ports:
           - 3306:3306
     steps:
