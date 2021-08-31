@@ -19,7 +19,7 @@ analyze:
 prepare-dev:
 	npm install
 	npm run dev
-	php bin/console cache:clear --env=dev
+	composer install --prefer-dist
 	php bin/console doctrine:database:drop --if-exists -f --env=dev
 	php bin/console doctrine:database:create --env=dev
 	php bin/console doctrine:schema:update -f --env=dev
@@ -29,7 +29,7 @@ prepare-dev:
 prepare-test:
 	npm install
 	npm run dev
-	php bin/console cache:clear --env=test
+	composer install --prefer-dist
 	php bin/console doctrine:database:drop --if-exists -f --env=test
 	php bin/console doctrine:database:create --env=test
 	php bin/console doctrine:schema:update -f --env=test
