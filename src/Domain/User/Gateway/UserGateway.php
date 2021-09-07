@@ -9,4 +9,6 @@ interface UserGateway
     public function register(User $user): void;
 
     public function findOneByEmail(string $username): ?User;
+
+    public function findOneByNickname(string $nickname): ?User;
 }

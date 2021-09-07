@@ -3,6 +3,8 @@
 namespace App\Domain\User\UseCase\Registration;
 
 use App\Domain\Shared\Exception\BadRequestException;
+use App\Domain\User\Validator\EmailNotExist;
+use App\Domain\User\Validator\NicknameNotExist;
 use Symfony\Component\Validator\Constraints\Email;
 use Symfony\Component\Validator\Constraints\Length;
 use Symfony\Component\Validator\Constraints\NotBlank;
@@ -20,10 +22,12 @@ class RegistrationRequest
     {
         $metadata->addPropertyConstraints("nickname", [
             new NotBlank(),
+            new NicknameNotExist()
         ]);
         $metadata->addPropertyConstraints("email", [
             new Email(),
             new NotBlank(),
+            new EmailNotExist()
         ]);
         $metadata->addPropertyConstraints("password", [
             new Length(["min" => 8]),

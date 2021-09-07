@@ -60,4 +60,19 @@ class UserRepository extends ServiceEntityRepository implements PasswordUpgrader
             $doctrineUser->getPassword(),
         );
     }
+
+    public function findOneByNickname(string $nickname): ?User
+    {
+        $doctrineUser = $this->findOneBy(['nickname' => $nickname]);
+
+        if (null === $doctrineUser) {
+            return null;
+        }
+        return new User(
+            $doctrineUser->getNickname(),
+            $doctrineUser->getEmail(),
+            $doctrineUser->getCreatedAt(),
+            $doctrineUser->getPassword(),
+        );
+    }
 }
