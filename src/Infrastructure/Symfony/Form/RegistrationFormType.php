@@ -43,5 +43,4 @@ class RegistrationFormType extends AbstractType
     {
         $resolver->setDefault('data_class', RegistrationRequest::class);
     }
-
 }
